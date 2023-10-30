@@ -23,7 +23,16 @@ mensaje1 += 'adios'
 print(f'mensaje1: {mensaje1}, id: {hex(id(mensaje1))}')
 
 
-# help(str.join)
+# help(str.join) Convierte una Lista a una Cadena
+'''
+join(self, iterable, /)
+    Concatenate any number of strings.
+
+    The string whose method is called is inserted in between each given string.
+    The result is returned as a new string.
+
+    Example: '.'.join(['ab', 'pq', 'rs']) -> 'ab.pq.rs'
+'''
 tupla_str = ('Hola', 'Mundo', 'Universidad', 'Python')
 mensaje = ' '.join(tupla_str)
 print(f'mensaje: {mensaje}')
@@ -39,11 +48,29 @@ print(f'mensaje: {mensaje}')
 diccionario = {'nombre': 'Juan', 'Apellido': 'Perez', 'edad': '18'}
 llaves = '-'.join(diccionario.keys())
 valores = '-'.join(diccionario.values())
-print(f'llaves: {llaves}, type: {type(llaves)}')
+print(f'llaves: {llaves}, type: {type(llaves)}')  # .center(80, '-'))
 print(f'llaves: {valores}, type: {type(valores)}')
 
 
-# help(str.split)
+# help(str.split) convierte una cadena a una Lista
+'''
+split(self, /, sep=None, maxsplit=-1)
+    Return a list of the substrings in the string, using sep as the separator string.
+
+      sep
+        The separator used to split the string.
+
+        When set to None (the default value), will split on any whitespace
+        character (including \\n \\r \\t \\f and spaces) and will discard
+        empty strings from the result.
+      maxsplit
+        Maximum number of splits (starting from the left).
+        -1 (the default value) means no limit.
+
+    Note, str.split() is mainly useful for data that has been intentionally
+    delimited.  With natural text that includes punctuation, consider using
+    the regular expression module.
+'''
 cursos = 'Java Python JavaScript Angular Spring Excel'
 lista_cursos = cursos.split()
 print(f'Lista cursos: {lista_cursos}, type: {type(lista_cursos)}')
